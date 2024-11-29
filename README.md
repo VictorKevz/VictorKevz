@@ -28,8 +28,9 @@
 <h2 align="center">📚 Featured Projects</h2>
 <ul>
   <li><strong>Tech & Ride:</strong> E-commerce app with multi-step form, cart, and checkout, using React and Local Storage for state management.</li>
-  <li><strong>Help-Chef (WIP):</strong> Ingredient recipe search app with multi-language support and dynamic category pages.</li>
-  <li><strong>REST Countries API:</strong> API-driven project with pagination for easy browsing and searching of country data.</li>
+  <li><strong>Help-Chef (WIP):</strong> Ingredient recipe search app with theme switch support and dynamic category pages.</li>
+  <li><strong>Country Rank:</strong> API-driven project with pagination for easy browsing and searching of country data.</li>
+  <li><strong>Multi-step Form:</strong> Demonstrates complex state management using `useReducer Hook` in React.</li>
 </ul>
 
 <h2 align="center">🌟 My Development Philosophy</h2>
