@@ -33,13 +33,16 @@
 </ul>
 
 <h2 align="center">🌟 My Development Philosophy</h2>
-<p align="center">I prioritize readability, reusability, and clean architecture, aiming to create projects that are easy to maintain, scale, and adapt across devices.</p>
+<p align="center">I prioritize readability, reusability, and clean architecture, aiming to create 
+  projects that are easy to maintain, scale, and adapt across devices.</p>
 
 <h2 align="center">📈 Goals</h2>
 <ul>
-  <li>Expand my portfolio to include six diverse projects.</li>
+  
   <li>Enhance proficiency with TypeScript.</li>
+  <li>Enhance proficiency with Tailwind</li>
   <li>Explore user experience and accessibility improvements.</li>
+  <li>Explore back-end technologies.</li>
 </ul>
 
 <h2 align="center">🤝 Let’s Connect!</h2>
