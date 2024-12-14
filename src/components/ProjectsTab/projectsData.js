@@ -10,20 +10,18 @@ import routerIcon from "../../assets/icons/react-router.svg";
 import techRide from "../../assets/images/techRide.svg";
 import helpChef from "../../assets/images/helpChef.svg";
 import countryRank from "../../assets/images/countryRank.svg";
+import form from "../../assets/images/form.svg";
 
 export const projectsData = {
   links: [
-    { id: uuidv4(), text: "API", name: "api" },
-    { id: uuidv4(), text: "React.Js", name: "reactJs" },
-    { id: uuidv4(), text: "CSS", name: "css" },
-
+    { id: uuidv4(), text: "API-oriented", name: "api" },
+    { id: uuidv4(), text: "Logic & Design", name: "designLogic" },
   ],
   api: [
     {
       id: uuidv4(),
       title: "Tech & Ride",
-      parag:
-        "E-commerce Tech store.",
+      parag: "E-commerce Tech store.",
       repo: "https://github.com/VictorKevz/tech-ride-eCommerce-site.git",
       live: "https://victorkevz.github.io/tech-ride-eCommerce-site/",
       techStack: [
@@ -40,8 +38,7 @@ export const projectsData = {
     {
       id: uuidv4(),
       title: "Help-Chef",
-      parag:
-        "A recipe discovery app.",
+      parag: "A recipe discovery app.",
       repo: "https://github.com/VictorKevz/Help-Chef-App.git",
       live: "https://victorkevz.github.io/Help-Chef-App/",
       techStack: [
@@ -58,8 +55,7 @@ export const projectsData = {
     {
       id: uuidv4(),
       title: "Country-Rank",
-      parag:
-        "Country ranking App.",
+      parag: "Country ranking App.",
       repo: "https://github.com/VictorKevz/country-rank.git",
       live: "https://victorkevz.github.io/country-rank/",
       techStack: [
@@ -74,6 +70,15 @@ export const projectsData = {
       image: countryRank,
     },
   ],
-  reactJs: [],
-  css: [],
+  designLogic: [
+    {
+      id: uuidv4(),
+      title: "Multi-step Form",
+      parag: "Interactive complex state form",
+      repo: "https://github.com/VictorKevz/multistep-form.git",
+      live: "https://victorkevz.github.io/multistep-form/",
+      techStack: [viteIcon, reactIcon, htmltIcon, cssIcon, gitIcon, framerIcon],
+      image: form,
+    },
+  ],
 };

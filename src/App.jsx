@@ -8,7 +8,7 @@ export const DataContext = createContext();
 const tabReducer = (state, action) => {
   switch (action.type) {
     case "UPDATE_TAB":
-      const { tab,key } = action.payload;
+      const { tab, key } = action.payload;
       return {
         ...state,
         [key]: tab,
@@ -17,8 +17,7 @@ const tabReducer = (state, action) => {
       return {
         ...state,
         currentCardTab: null,
-        currentProjectsTab:"api"
-        
+        currentProjectsTab: "api",
       };
 
     default:
@@ -28,8 +27,7 @@ const tabReducer = (state, action) => {
 function App() {
   const initialData = {
     currentCardTab: null,
-    currentProjectsTab:"api"
-    
+    currentProjectsTab: "api",
   };
   const [tab, dispatchTab] = useReducer(tabReducer, initialData);
   return (
@@ -37,8 +35,6 @@ function App() {
       <main className="outer-container">
         <Card />
         {tab.currentCardTab === "Projects" && <Projects />}
-
-       
       </main>
     </DataContext.Provider>
   );
