@@ -50,5 +50,5 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/victor-kuwandira">LinkedIn</a> | 
   <a href="https://github.com/VictorKevz">GitHub</a> | 
-  <a href="mailto:victor.kuwandira@student.oulu.fi">Email</a>
+  <a href="mailto:contact@victorkevz.com">Email</a>
 </p>
