@@ -33,13 +33,13 @@
   height: 3rem;
   padding: 0 1rem;
   border-radius: 2rem;
-  background-color: #b8af73b1;
+  background-color: var(--black-1);
 }
 .projects-tab-item {
   width: fit-content;
 }
 .projects-tab-btn {
-  color: var(--black-1);
+  color: var(--white);
   font-size: 1.2rem;
   width: fit-content;
   height: 2.3rem;
@@ -59,7 +59,9 @@
   background-color: var(--golden-yellow);
   color: var(--black-1)!important;
 }
-
+.projects-tab-btn:hover{
+    color: var(--black-1);
+}
 .tabs-grid {
   margin-top: 3rem;
   width: 100%;
