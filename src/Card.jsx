@@ -1,41 +1,22 @@
-import {
-  Email,
-  GitHub,
-  Language,
-  LinkedIn,
-  LocationOn,
-  Phone,
-} from "@mui/icons-material";
-import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { useContext, useState } from "react";
 import profile from "./assets/images/profile-pic1.svg";
+import Projects from "./components/ProjectsTab/Projects";
+import { profileData } from "./profileData";
+import { DataContext } from "./App";
+
 function Card() {
   const [readMore, setReadMore] = useState(false);
+  const { tab, dispatchTab } = useContext(DataContext);
+
+  const currentCardTab = tab.currentCardTab;
   const defaultText =
     "I am a disciplined, self-motivated front-end developer specializing in modern, responsive, and accessible web applications. Skilled in JavaScript and React.js ...";
   const allText =
     "I am a disciplined, self-motivated front-end developer specializing in modern, responsive, and accessible web applications. Skilled in JavaScript and React.js, I bring a user-centered approach to creating functional, inclusive digital solutions. My experience co-founding a tech company honed my business acumen and leadership skills, and I stay current with evolving technologies";
   const textToshow = readMore ? allText : defaultText;
-  const profileData = {
-    contanct: [
-      { id: uuidv4(), text: "contact@victorkevz.com", icon: Email },
-      { id: uuidv4(), text: "+358 40 463 9819", icon: Phone },
-      { id: uuidv4(), text: "Oulu, Finland", icon: LocationOn },
-    ],
-    links: [
-      { id: uuidv4(), url: "https://wwww.victorkevz.com", icon: Language },
-      { id: uuidv4(), url: "https://github.com/VictorKevz", icon: GitHub },
-      {
-        id: uuidv4(),
-        url: "https://www.linkedin.com/in/victor-kuwandira/",
-        icon: LinkedIn,
-      },
-    ],
-    tabs: ["Projects", "Career", "About me"],
-  };
 
   return (
-    <section className="card-wrapper">
+    <section className={`card-wrapper ${currentCardTab !== null && "small"}`}>
       <div className="left-side">
         <div className="profile-name">
           <figure className="profile-fig">
@@ -62,7 +43,7 @@ function Card() {
           {profileData.links.map((link) => (
             <li key={link.id} className="link-item">
               <a href={link.url} target="_blank" className="link-icon">
-                <link.icon />
+                <link.icon className="external-icon" />
               </a>
             </li>
           ))}
@@ -100,7 +81,13 @@ Right side content
           {profileData.tabs.map((tab, i) => {
             return (
               <li key={i} className="tab-item">
-                {tab}
+                <button
+                  type="button"
+                  className="tab-btn"
+                  onClick={() => dispatchTab({type:"UPDATE_TAB",payload:{tab, key:"currentCardTab"}})}
+                >
+                  {tab}
+                </button>
               </li>
             );
           })}

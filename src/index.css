@@ -5,6 +5,7 @@
   --black-2:#191915;
   --yellow-1:#e0d8a5;
   --golden-yellow:#ffde59;
+  --faded-gold:#eded170d;
   --white:#fff;
 }
 *{
@@ -17,6 +18,7 @@
 body,html{
   width: 100%;
   overflow-x: hidden;
+  background-color: #0e0e0d;
 
 }
 button{
@@ -25,9 +27,11 @@ button{
   justify-content: center;
   border: none;
   cursor: pointer;
+  background: none;
+  font-weight: 600;
 }
 p{
-  font-size: 1.4rem;
+  font-size: 1.125rem;
 }
 li{
   list-style-type: none;
@@ -35,4 +39,39 @@ li{
 a{
   text-decoration: none;
   color: inherit;
+}
+/* COMMON STYLES */
+.modal-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  background-color: #20201f11;
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  /* overflow-y: auto; */
+}
+.modal-container{
+  max-width: 1300px;
+  width: 100%;
+  /* min-height: 500px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem 0 1.5rem;
+}
+.close-btn{
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: var(--yellow-1);
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
 }

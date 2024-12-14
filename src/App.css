@@ -8,24 +8,40 @@
   background: url("./assets/images/dark-bg.svg") no-repeat center/cover;
   padding: 0 1.2rem;
   color: var(--white);
+  position: relative;
+  z-index: 5;
 }
-
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 .card-wrapper{
   max-width: 49rem;
   width: 100%;
   border-radius: .95rem;
   background-color: var(--black-1);
-  border: 1px solid var(--yellow-1);
-  background: url("./assets/images/pattern-dark.svg") no-repeat top right/contain;
+  border: 1px solid var(--faded-gold);
+  background: var(--black-1) url("./assets/images/pattern-dark.svg") no-repeat top right/contain;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: flex-start;
+  box-shadow: 0 0 1rem rgba(255, 217, 0, 0.056);
+}
+.small{
+opacity: .5!important;
+
+
 }
 .left-side{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-right: 1px solid  rgba(249, 249, 249, 0.182);
+  border-right: 1px solid  var(--faded-gold);
 height: 100%;
 }
 .profile-name{
@@ -70,12 +86,12 @@ height: 100%;
   border-radius: 50%;
   background-color: var(--golden-yellow);
   color: var(--black-1);
-  padding: .4rem;
+  padding: .3rem;
 }
 .divider{
   height: 1px;
   width: 100%;
-  background-color: rgba(249, 249, 249, 0.182);
+  background-color: var(--faded-gold);
 }
 .external-links{
   display: flex;
@@ -87,42 +103,43 @@ height: 100%;
 
 }
 .increase-mt{
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 .link-icon{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: .4rem;
   background-color: var(--yellow-1);
   color: var(--black-1);
+  
 }
-
+.external-icon{
+  font-size: 2rem!important;
+}
 
 
 .right-side{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.38rem .75rem .75rem 1.5rem;
+  padding: 1.38rem .75rem 1.25rem 1.5rem;
 }
 .title{
   margin-bottom: .5rem;
 }
 .parag{
-  display: inline;
   font-size: 1.1rem;
   margin-top: .35rem;
-  max-width: 100px;
   width: 90%;
 }
 .toggle-text-btn{
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: var(--golden-yellow);
+background-color: var(--yellow-1);
 border-radius: 1rem;
 height: 2rem;
 padding: 0 .5rem;
@@ -137,7 +154,7 @@ margin-top: .5rem;
 }
 
 .tab-list{
-  margin-top: 1.3rem;
+  margin-top: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -159,6 +176,6 @@ margin-top: .5rem;
   background-color: var(--golden-yellow);
   border-radius: 2rem;
   font-weight: 600;
-  cursor: pointer;
+  cursor: 5;
   
 }
