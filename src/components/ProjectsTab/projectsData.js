@@ -7,10 +7,10 @@ import viteIcon from "../../assets/icons/vite.svg";
 import framerIcon from "../../assets/icons/framer-motion.svg";
 import routerIcon from "../../assets/icons/react-router.svg";
 
-import techRide from "../../assets/images/techRide.svg";
-import helpChef from "../../assets/images/helpChef.svg";
-import countryRank from "../../assets/images/countryRank.svg";
-import form from "../../assets/images/form.svg";
+import techRide from "../../assets/images/techRide1.svg";
+import helpChef from "../../assets/images/helpChef1.svg";
+import countryRank from "../../assets/images/countryRank1.svg";
+import form from "../../assets/images/form1.svg";
 
 export const projectsData = {
   links: [

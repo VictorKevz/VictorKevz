@@ -17,6 +17,7 @@ function Card() {
 
   return (
     <section className={`card-wrapper ${currentCardTab !== null && "small"}`}>
+      <div className="card-content">
       <div className="left-side">
         <div className="profile-name">
           <figure className="profile-fig">
@@ -92,6 +93,8 @@ Right side content
             );
           })}
         </ul>
+      </div>
+      <div className="overlay"></div>
       </div>
     </section>
   );

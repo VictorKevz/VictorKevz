@@ -73,7 +73,7 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  border-radius: 0.75rem;
+  border-radius: 1.5rem;
   border: 1.5px solid var(--faded-gold);
   box-shadow: 0 0 1rem rgba(255, 217, 0, 0.056);
   overflow: hidden;
@@ -81,13 +81,12 @@
 }
 
 .card-header {
-  min-height: 350px;
   width: 100%;
 }
 
 .card-img {
-  width: 100%;
-  border-radius: 0.75rem 0.75rem 0 0;
+  width: 105%;
+  border-radius: 1.4rem 1.4rem 0 0;
 }
 .details {
   margin-top: 0.75rem;
@@ -134,6 +133,7 @@
   border-top: 1px solid var(--faded-gold);
   background-color: var(--black-1);
   border-radius: 0 0 0.65rem 0.65rem;
+  opacity: .7;
 }
 .tech-stack-img {
   width: 30px;

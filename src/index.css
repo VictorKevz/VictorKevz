@@ -1,27 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --black-1:#0e0e0d;
-  --black-2:#191915;
-  --yellow-1:#e0d8a5;
-  --golden-yellow:#ffde59;
-  --faded-gold:#eded170d;
-  --white:#fff;
+  --black-1: #0e0e0d;
+  --black-2: #191915;
+  --yellow-1: #e0d8a5;
+  --golden-yellow: #ffde59;
+  --faded-gold: #eded170d;
+  --white: #fff;
 }
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
-
 }
-body,html{
+body,
+html {
   width: 100%;
   overflow-x: hidden;
   background-color: #0e0e0d;
-
 }
-button{
+button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,20 +29,19 @@ button{
   background: none;
   font-weight: 600;
 }
-p{
+p {
   font-size: 1.125rem;
 }
-li{
+li {
   list-style-type: none;
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-
 /* COMMON STYLES....................................... */
-.modal-wrapper{
+.modal-wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -53,26 +51,25 @@ a{
   align-items: center;
   justify-content: center;
   padding: 0 1.5rem;
-  background-color: #20201f11;
-  backdrop-filter: blur(3px);
+  background-color: #20201fae;
+  backdrop-filter: blur(5px);
   z-index: 10;
   /* overflow-y: auto; */
 }
-.modal-container{
+.modal-container {
   max-width: 1300px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--black-2);
+  /* background-color: var(--black-2); */
   border-radius: 1rem;
-  padding: 2rem 1.5rem 1.2rem 1.5rem;
+  padding: 2rem 1.5rem;
   position: relative;
-  border: 1.5px solid var(--faded-gold); 
-
+  border: 1.5px solid var(--faded-gold);
 }
-.close-btn{
+.close-btn {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
@@ -83,9 +80,10 @@ a{
   z-index: 2;
 }
 
-
 /* COMMON ACTIVE STATES....................................... */
-.close-btn::before,.projects-tab-btn:not(.active):before{
+.close-btn::before,
+.link-icon::before,
+.projects-tab-btn:not(.active):before {
   position: absolute;
   content: "";
   width: 0%;
@@ -93,15 +91,14 @@ a{
   left: 0;
   top: 0;
   background-color: var(--golden-yellow);
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
   border-radius: 50%;
   box-shadow: 0 0 1rem rgba(255, 217, 0, 0.224);
-
 }
-.close-btn:hover::before,.projects-tab-btn:hover::before{
-width: 100%;
-z-index: -1;
-transition: .3s ease-in;
-
-
+.close-btn:hover::before,
+.link-icon:hover::before,
+.projects-tab-btn:hover::before {
+  width: 100%;
+  z-index: -1;
+  transition: 0.3s ease-in;
 }
