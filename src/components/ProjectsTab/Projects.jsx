@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { DataContext } from "../../App";
 import { Close } from "@mui/icons-material";
 import { AnimatePresence, motion } from "framer-motion";
 import "./projects.css";
 import { projectsData } from "./projectsData";
-import { modalVariants } from "../../variants";
+import { modalVariants, tabVariants } from "../../variants";
 function Projects() {
   const { tab, dispatchTab } = useContext(DataContext);
   const keyTab = tab.currentProjectsTab;
-
+  const [direction, setDirection] = useState(true);
   // Ref for detecting clicks outside the modal
   const modalRef = useRef(null);
 
@@ -57,11 +57,14 @@ function Projects() {
                     <li
                       key={tab.id}
                       className={`projects-tab-item `}
-                      onClick={() =>
+                      onClick={() =>{
                         dispatchTab({
                           type: "UPDATE_TAB",
                           payload: { tab: tab.name, key: "currentProjectsTab" },
                         })
+                        setDirection(!direction)
+                      }
+                        
                       }
                     >
                       <button
@@ -75,7 +78,15 @@ function Projects() {
                 })}
               </ul>
             </header>
-            <div className="tabs-grid">
+            <AnimatePresence mode="wait">
+            <motion.div
+              className="tabs-grid"
+              variants={tabVariants(direction)}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              key={keyTab}
+            >
               {projectsData[keyTab].map((obj) => (
                 <div key={obj.id} className="project-card">
                   <header className="card-header">
@@ -102,7 +113,8 @@ function Projects() {
                   </ul>
                 </div>
               ))}
-            </div>
+            </motion.div>
+            </AnimatePresence>
           </div>
           <button
             type="button"

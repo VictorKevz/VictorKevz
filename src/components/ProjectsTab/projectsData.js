@@ -11,6 +11,7 @@ import techRide from "../../assets/images/techRide1.svg";
 import helpChef from "../../assets/images/helpChef1.svg";
 import countryRank from "../../assets/images/countryRank1.svg";
 import form from "../../assets/images/form1.svg";
+import taskManager from "../../assets/images/taskManager.svg";
 
 export const projectsData = {
   links: [
@@ -71,6 +72,24 @@ export const projectsData = {
     },
   ],
   designLogic: [
+    {
+      id: uuidv4(),
+      title: "Multi-step Form",
+      parag: "Interactive complex state form",
+      repo: "https://github.com/VictorKevz/multistep-form.git",
+      live: "https://victorkevz.github.io/multistep-form/",
+      techStack: [viteIcon, reactIcon, htmltIcon, cssIcon, gitIcon, framerIcon],
+      image: form,
+    },
+    {
+      id: uuidv4(),
+      title: "Task Manager",
+      parag: "Interactive project management tool",
+      repo: "https://github.com/VictorKevz/Task-Manager.git",
+      live: "https://victorkevz.github.io/Task-Manager/",
+      techStack: [viteIcon, reactIcon, htmltIcon, cssIcon, gitIcon, framerIcon],
+      image: taskManager,
+    },
     {
       id: uuidv4(),
       title: "Multi-step Form",
