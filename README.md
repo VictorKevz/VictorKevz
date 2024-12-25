@@ -1,11 +1,11 @@
 <h1 align="center">Hi there! 👋 I’m Victor</h1>
 
-<p align="center">Welcome to my GitHub! I’m a passionate front-end developer with a focus on user-centered design. Here, you’ll find projects showcasing my skills in dynamic UI components, responsive design, and robust state management.</p>
+<p align="center">I’m a disciplined developer who loves crafting accessible, user-centered web applications. Always learning and exploring new technologies, I strive to build solutions that are not only functional but genuinely enjoyable to use. My entrepreneurial experience has sharpened my ability to align technical solutions with real-world business needs.</p>
 
 <h2 align="center">🚀 About Me</h2>
 <ul>
   <li>🖥️ <strong>Frontend Focus:</strong> Skilled in React and modern JavaScript, I build interactive and responsive UIs.</li>
-  <li>🌱 <strong>Currently Learning:</strong> Expanding expertise in TypeScript and Next.js.</li>
+  <li>🌱 <strong>Currently Learning:</strong> Expanding expertise in TypeScript and Tailwind CSS.</li>
   <li>🎨 <strong>Project Structure Enthusiast:</strong> I believe in well-structured, scalable codebases.</li>
   <li>📈 <strong>Continuous Improvement:</strong> Constantly learning and refining skills in responsive design and advanced CSS.</li>
 </ul>
@@ -31,19 +31,6 @@
   <li><strong>Help-Chef (WIP):</strong> Ingredient recipe search app with theme switch support and dynamic category pages.</li>
   <li><strong>Country Rank:</strong> API-driven project with pagination for easy browsing and searching of country data.</li>
   <li><strong>Multi-step Form:</strong> Demonstrates complex state management using <strong>useReducer and useContext Hooks</strong> in React.</li>
-</ul>
-
-<h2 align="center">🌟 My Development Philosophy</h2>
-<p align="center">I prioritize readability, reusability, and clean architecture, aiming to create 
-  projects that are easy to maintain, scale, and adapt across devices.</p>
-
-<h2 align="center">📈 Goals</h2>
-<ul>
-  
-  <li>Enhance proficiency with TypeScript.</li>
-  <li>Enhance proficiency with Tailwind</li>
-  <li>Explore user experience and accessibility improvements.</li>
-  <li>Explore back-end technologies.</li>
 </ul>
 
 <h2 align="center">🤝 Let’s Connect!</h2>
