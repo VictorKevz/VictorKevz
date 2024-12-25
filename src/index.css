@@ -82,23 +82,26 @@ a {
 
 /* COMMON ACTIVE STATES....................................... */
 .close-btn::before,
+.tab-btn::before,
 .link-icon::before,
 .projects-tab-btn:not(.active):before {
   position: absolute;
   content: "";
-  width: 0%;
+  width: 100%;
   height: 100%;
+  scale:  0;
   left: 0;
   top: 0;
   background-color: var(--golden-yellow);
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
   border-radius: 50%;
   box-shadow: 0 0 1rem rgba(255, 217, 0, 0.224);
 }
 .close-btn:hover::before,
+.tab-btn:hover::before,
 .link-icon:hover::before,
 .projects-tab-btn:hover::before {
-  width: 100%;
+  scale: 1;
   z-index: -1;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
 }

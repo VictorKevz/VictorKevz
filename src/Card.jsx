@@ -79,15 +79,15 @@ Right side content
           </p>
         </div>
         <ul className="tab-list">
-          {profileData.tabs.map((tab, i) => {
+          {profileData.tabs.map((tab) => {
             return (
-              <li key={i} className="tab-item">
+              <li key={tab.id} className="tab-item">
                 <button
                   type="button"
                   className="tab-btn"
-                  onClick={() => dispatchTab({type:"UPDATE_TAB",payload:{tab, key:"currentCardTab"}})}
+                  onClick={() => dispatchTab({type:"UPDATE_TAB",payload:{tab:tab.text, key:"currentCardTab"}})}
                 >
-                  {tab}
+                  <span className="tab-icon">{<tab.icon/>}</span>{tab.text}
                 </button>
               </li>
             );
