@@ -6,7 +6,7 @@ import { DataContext } from "./App";
 
 function Card() {
   const [readMore, setReadMore] = useState(false);
-  const { tab, dispatchTab } = useContext(DataContext);
+  const { tab, dispatchTab,isLight } = useContext(DataContext);
 
   const currentCardTab = tab.currentCardTab;
   const defaultText =
@@ -16,7 +16,7 @@ function Card() {
   const textToshow = readMore ? allText : defaultText;
 
   return (
-    <section className={`card-wrapper ${currentCardTab !== null && "small"}`}>
+    <section className={`card-wrapper ${currentCardTab !== null && "small"} ${isLight && "light-body"}`}>
       <div className="card-content">
       <div className="left-side">
         <div className="profile-name">
@@ -61,7 +61,7 @@ Right side content
 */}
       <div className="right-side">
         <div className="heading-top">
-          <h2 className="title">Front-end developer</h2>
+          <h2 className="title">Front-end Developer</h2>
           <p className="parag">{textToshow} </p>
           <button
             type="button"
@@ -94,7 +94,7 @@ Right side content
           })}
         </ul>
       </div>
-      <div className="overlay"></div>
+      <div className={`overlay ${isLight && "light-body"}`}></div>
       </div>
     </section>
   );

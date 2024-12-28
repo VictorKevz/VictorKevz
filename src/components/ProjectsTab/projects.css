@@ -31,9 +31,11 @@
   width: 100%;
   justify-content: space-between;
   height: 3rem;
-  padding: 0 1rem;
+  padding: 0 .75rem;
   border-radius: 2rem;
-  background-color: var(--black-1);
+  background-color: rgb(32, 31, 29);
+  border: 1.5px solid var(--faded-gold);
+
 }
 .projects-tab-item {
   width: fit-content;
@@ -53,7 +55,7 @@
 }
 .projects-tab-btn::before {
     border-radius: 1.1rem !important;
-    transform: translateX(5px);
+    /* transform: translateX(5px); */
   }
 .active {
   background-color: var(--golden-yellow);

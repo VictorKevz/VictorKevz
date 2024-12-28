@@ -1,0 +1,48 @@
+.pulse-container{
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem ;
+}
+.pulse-wrapper{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--yellow-1);
+    animation: pulse 3s infinite;
+}
+.pulse-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--golden-yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.settings-icon{
+    font-size: 1.6rem!important;
+    color: var(--black-1);
+}
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 var(--yellow-1);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+        
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(12, 12, 12, 0.272);
+        
+    }
+}

@@ -15,7 +15,7 @@ import taskManager from "../../assets/images/taskManager.svg";
 
 export const projectsData = {
   links: [
-    { id: uuidv4(), text: "API-oriented", name: "api" },
+    { id: uuidv4(), text: "API-Oriented", name: "api" },
     { id: uuidv4(), text: "Logic & Design", name: "designLogic" },
   ],
   api: [
