@@ -3,8 +3,8 @@ import "./App.css";
 import Card from "./Card";
 import Projects from "./components/ProjectsTab/Projects";
 import Settings from "./components/Settings/Settings";
-import { s } from "framer-motion/client";
 import PulseButton from "./components/PulseButton/PulseButton";
+import { useTranslation } from "react-i18next";
 
 export const DataContext = createContext();
 
@@ -32,18 +32,24 @@ const tabReducer = (state, action) => {
   }
 };
 function App() {
+  const savedColorTheme = JSON.parse(localStorage.getItem("colorTheme"));
+  const savedFontTheme = JSON.parse(localStorage.getItem("fontTheme"));
+  const savedLanguage = JSON.parse(localStorage.getItem("language"));
   const initialData = {
     currentCardTab: null,
     currentProjectsTab: "api",
     showSettings: false,
     settingsTab:"colorTheme",
-    fontTheme:'"Inter", serif',
-    colorTheme:"dark",
+    fontTheme: savedFontTheme || '"Inter", sans-serif',
+    colorTheme: savedColorTheme || "light",
+    language: savedLanguage || "en",
   };
   const [tab, dispatchTab] = useReducer(tabReducer, initialData);
   const isLight = tab.colorTheme === "light";
+
+  const{t} = useTranslation();
   return (
-    <DataContext.Provider value={{ tab, dispatchTab,isLight }}>
+    <DataContext.Provider value={{ tab, dispatchTab,isLight,t }}>
       <main className={`outer-container ${isLight && "light-body"}`} style={{fontFamily:tab.fontTheme}}>
         <Card />
         {tab.currentCardTab === "Projects" && <Projects />}

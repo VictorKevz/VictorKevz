@@ -1,5 +1,5 @@
 export const modalVariants = {
-  hidden: { x: 50, y: 50, scale: 0.8, opacity: 0 },
+  hidden: { x: 30, y: 30, scale: 0.8, opacity: 0 },
   visible: {
     opacity: 1,
     x: 0,
@@ -8,8 +8,8 @@ export const modalVariants = {
     transition: {
       type: "tween",
       ease: "easeInOut",
-      duration: 0.5,
-      delay: 0.1,
+      duration: 0.6,
+      
     },
   },
   exit: {
@@ -19,7 +19,7 @@ export const modalVariants = {
     transition: {
       type: "tween",
       ease: "easeInOut",
-      duration: 0.6,
+      duration: 0.5,
     },
   },
 };

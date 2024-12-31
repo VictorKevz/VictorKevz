@@ -30,14 +30,14 @@ function Projects() {
   }, [dispatchTab]);
 
   return (
-    <article className="modal-wrapper">
+    <article className="modal-wrapper projects">
       <AnimatePresence mode="wait">
         <motion.div
           className="modal-container"
           variants={modalVariants}
           initial="hidden"
           animate="visible"
-          exit="exit"
+          
           key={tab.currentCardTab}
           ref={modalRef}
         >

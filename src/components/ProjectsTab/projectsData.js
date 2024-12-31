@@ -12,6 +12,7 @@ import helpChef from "../../assets/images/helpChef1.svg";
 import countryRank from "../../assets/images/countryRank1.svg";
 import form from "../../assets/images/form1.svg";
 import taskManager from "../../assets/images/taskManager.svg";
+import notesApp from "../../assets/images/notes-app.svg";
 
 export const projectsData = {
   links: [
@@ -74,15 +75,6 @@ export const projectsData = {
   designLogic: [
     {
       id: uuidv4(),
-      title: "Multi-step Form",
-      parag: "Interactive complex state form",
-      repo: "https://github.com/VictorKevz/multistep-form.git",
-      live: "https://victorkevz.github.io/multistep-form/",
-      techStack: [viteIcon, reactIcon, htmltIcon, cssIcon, gitIcon, framerIcon],
-      image: form,
-    },
-    {
-      id: uuidv4(),
       title: "Task Manager",
       parag: "Interactive project management tool",
       repo: "https://github.com/VictorKevz/Task-Manager.git",
@@ -92,6 +84,15 @@ export const projectsData = {
     },
     {
       id: uuidv4(),
+      title: "Note-taking App",
+      parag: "Create, delete & update notes",
+      repo: "https://github.com/VictorKevz/Notes_App.git",
+      live: "https://victorkevz.github.io/Notes_App/",
+      techStack: [viteIcon, reactIcon, htmltIcon, cssIcon, gitIcon, framerIcon],
+      image: notesApp,
+    },
+    {
+      id: uuidv4(),
       title: "Multi-step Form",
       parag: "Interactive complex state form",
       repo: "https://github.com/VictorKevz/multistep-form.git",
@@ -99,5 +100,7 @@ export const projectsData = {
       techStack: [viteIcon, reactIcon, htmltIcon, cssIcon, gitIcon, framerIcon],
       image: form,
     },
+    
+    
   ],
 };

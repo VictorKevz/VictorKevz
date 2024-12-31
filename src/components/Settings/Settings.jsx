@@ -1,28 +1,45 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Settings.css";
-import {
-  CheckCircle,
-  Close,
-  RadioButtonChecked,
-  SettingsSuggest,
-} from "@mui/icons-material";
+import { CheckCircle, Close, RadioButtonChecked } from "@mui/icons-material";
 import { DataContext } from "../../App";
 import { settingsData } from "./settingsData";
-import { span } from "framer-motion/client";
+import { AnimatePresence, motion } from "framer-motion";
+import { modalVariants, tabVariants } from "../../variants";
+import i18n from "../../i18n";
 
 const Settings = () => {
-  const { tab, dispatchTab } = useContext(DataContext);
+  const { tab, dispatchTab, t } = useContext(DataContext);
+  const [direction, setDirection] = useState(true);
+
   const currentObj = settingsData.find((obj) => obj.id === tab.settingsTab);
 
+  useEffect(() => {
+    i18n.changeLanguage(tab.language);
+  }, [tab.language]);
+
+  useEffect(() => {
+    localStorage.setItem("colorTheme", JSON.stringify(tab.colorTheme));
+    localStorage.setItem("fontTheme", JSON.stringify(tab.fontTheme));
+    localStorage.setItem("language", JSON.stringify(tab.language));
+  }, [tab.language, tab.colorTheme, tab.fontTheme]);
   return (
     <div className="modal-wrapper settings">
-      <div className="settings-wrapper">
-        <button
-          className="close-btn settings"
-          onClick={() => dispatchTab({ type: "TOGGLE_SETTINGS" })}
-        >
-          <Close className="settings-icon" />
-        </button>
+      <motion.div
+        className="settings-wrapper"
+        variants={modalVariants}
+        initial="hidden"
+        animate="visible"
+        key={tab.showSettings}
+      >
+        <header className="settings-header">
+          <h2 className="settings-heading">{t("Settings")}</h2>
+          <button
+            className="close-btn settings"
+            onClick={() => dispatchTab({ type: "TOGGLE_SETTINGS" })}
+          >
+            <Close className="settings-icon" />
+          </button>
+        </header>
 
         <article className="theme-wrapper">
           <div className="slider">
@@ -33,24 +50,33 @@ const Settings = () => {
                   key={obj.id}
                   type="button"
                   className={`slider-btn ${isActive && "active-tab"}`}
-                  onClick={() =>
+                  onClick={() => {
                     dispatchTab({
                       type: "UPDATE_TAB",
                       payload: { tab: obj.id, key: "settingsTab" },
-                    })
-                  }
+                    });
+                    setDirection(!direction);
+                  }}
                 >
                   <obj.icon
                     className={`slider-icon ${isActive && "active-icon"}`}
                   />
-                  {obj.label}
+                  <span className="slider-text">{t(obj.label)}</span>
                 </button>
               );
             })}
           </div>
+          <motion.div 
+          className="theme-content-wrapper"
+          variants={tabVariants(direction)}
+        initial="hidden"
+        animate="visible"
+        key={tab.settingsTab}
+        exit="exit"
+          >
           <header className="theme-header">
-            <h2 className="settings-title">{currentObj.label}</h2>
-            <p className="settings-parag">{currentObj.parag}</p>
+            <h2 className="settings-title">{t(currentObj.label)}</h2>
+            <p className="settings-parag">{t(currentObj.parag)}</p>
           </header>
           <div className="options-wrapper">
             {currentObj.options.map((option) => {
@@ -68,16 +94,24 @@ const Settings = () => {
                   }
                 >
                   <span className="theme-option-wrapper">
-                    {currentObj.id === "colorTheme" ? (
+                    {currentObj.id === "colorTheme" && (
                       <span className="color-icon-wrapper">
-                        <option.icon className="option-img" />
+                        <option.icon className="option-icon" />
                       </span>
-                    ) : (
+                    )}
+
+                    {currentObj.id === "fontTheme" && (
                       <span
                         className="font-text-label"
                         style={{ fontFamily: option.name }}
                       >
                         Aa
+                      </span>
+                    )}
+
+                    {currentObj.id === "language" && (
+                      <span className="language-icon-wrapper">
+                        <img src={option.icon} className="option-img" />
                       </span>
                     )}
 
@@ -90,7 +124,7 @@ const Settings = () => {
                             : {}
                         }
                       >
-                        {option.text}
+                        {t(option.text)}
                       </h2>
                       <p
                         className="theme-parag"
@@ -100,7 +134,7 @@ const Settings = () => {
                             : {}
                         }
                       >
-                        {option.parag}
+                        {t(option.parag)}
                       </p>
                     </span>
                   </span>
@@ -116,8 +150,9 @@ const Settings = () => {
               );
             })}
           </div>
+          </motion.div>
         </article>
-      </div>
+      </motion.div>
     </div>
   );
 };

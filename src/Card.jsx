@@ -6,7 +6,7 @@ import { DataContext } from "./App";
 
 function Card() {
   const [readMore, setReadMore] = useState(false);
-  const { tab, dispatchTab,isLight } = useContext(DataContext);
+  const { tab, dispatchTab,isLight,t } = useContext(DataContext);
 
   const currentCardTab = tab.currentCardTab;
   const defaultText =
