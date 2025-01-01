@@ -41,7 +41,7 @@ function App() {
     showSettings: false,
     settingsTab:"colorTheme",
     fontTheme: savedFontTheme || '"Inter", sans-serif',
-    colorTheme: savedColorTheme || "light",
+    colorTheme: savedColorTheme || "dark",
     language: savedLanguage || "en",
   };
   const [tab, dispatchTab] = useReducer(tabReducer, initialData);
