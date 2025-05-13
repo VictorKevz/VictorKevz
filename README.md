@@ -25,13 +25,6 @@
   <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code">
 </p>
 
-<h2 align="center">📚 Featured Projects</h2>
-<ul>
-  <li><strong>Tech & Ride:</strong> E-commerce app with form validation, cart, and checkout, using React and Local Storage for state management.</li>
-  <li><strong>Help-Chef (WIP):</strong> Ingredient recipe search app with theme switch support and dynamic category pages.</li>
-  <li><strong>Country Rank:</strong> API-driven project with pagination for easy browsing and searching of country data.</li>
-  <li><strong>Multi-step Form:</strong> Demonstrates complex state management using <strong>useReducer and useContext Hooks</strong> in React.</li>
-</ul>
 
 <h2 align="center">🤝 Let’s Connect!</h2>
 <p align="center">
