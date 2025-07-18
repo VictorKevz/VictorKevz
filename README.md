@@ -35,7 +35,8 @@
 
 <h2 align="center">🤝 Let’s Connect!</h2>
 <p align="center">
-  <a href="https://www.linkedin.com/in/victor-kuwandira">LinkedIn</a> |
+  <a href="https://www.linkedin.com/in/victor-kuwandira" target="_blank">LinkedIn</a> |
   <a href="https://github.com/VictorKevz">GitHub</a> |
+    <a href="https://www.frontendmentor.io/profile/VictorKevz" target="_blank">Frontend Mentor</a> |
   <a href="mailto:contact@victorkevz.com">Email</a>
 </p>
